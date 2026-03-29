@@ -138,7 +138,7 @@ function updateUI() {
     // Reinicializa o SortableJS para a lista atualizada
     if (sortableInstance) sortableInstance.destroy();
     sortableInstance = new Sortable(queueList, {
-        animation: 150, handle: '.queue-item-drag-handle', scroll: true, scrollSensitivity: 70, scrollSpeed: 15,
+        animation: 150, handle: '.queue-item-drag-handle', scroll: true, scrollSensitivity: 10, scrollSpeed: 60,
         onStart: () => { document.getElementById('player-bar').style.pointerEvents = 'none'; },
         onEnd: (evt) => {
             document.getElementById('player-bar').style.pointerEvents = 'auto';
